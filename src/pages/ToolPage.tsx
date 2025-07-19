@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink, CheckCircle } from 'lucide-react'
 import { useTools } from '../context/ToolContext'
+import PasswordGenerator from '../components/PasswordGenerator'
 
 const ToolPage = () => {
   const { toolId } = useParams<{ toolId: string }>()
@@ -34,6 +35,64 @@ const ToolPage = () => {
     )
   }
 
+  // Render the actual tool component if it's the password generator
+  if (tool.id === 'password-generator') {
+    return (
+      <div className="max-w-4xl mx-auto">
+        {/* Back Button */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-8"
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Tools</span>
+          </Link>
+        </motion.div>
+
+        {/* Tool Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="glass-effect rounded-2xl p-8 mb-8"
+        >
+          <div className="flex items-start justify-between mb-6">
+            <div className="flex items-center space-x-4">
+              <div className="text-6xl">{tool.icon}</div>
+              <div>
+                <h1 className="text-4xl font-bold mb-2">{tool.name}</h1>
+                <p className="text-gray-300 text-lg">{tool.description}</p>
+              </div>
+            </div>
+            <div className="text-right">
+              <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300">
+                {tool.category}
+              </span>
+              <div className="mt-2">
+                <span className={`inline-block px-3 py-1 rounded-full text-sm ${
+                  tool.status === 'active' ? 'bg-green-500/20 text-green-400' :
+                  tool.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
+                  'bg-blue-500/20 text-blue-400'
+                }`}>
+                  {tool.status === 'active' ? 'Active' :
+                   tool.status === 'beta' ? 'Beta' : 'Coming Soon'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Render the actual Password Generator component */}
+        <PasswordGenerator />
+      </div>
+    )
+  }
+
+  // Default tool page for other tools (placeholder)
   return (
     <div className="max-w-4xl mx-auto">
       {/* Back Button */}

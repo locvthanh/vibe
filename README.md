@@ -1,16 +1,16 @@
-# Vibe AI Hub ✨
+# Password Generator 🔐
 
-A creative and modern web application that serves as an entry point for all AI tools. Built with React, TypeScript, and modern web technologies.
+A secure and modern password generation tool built with React, TypeScript, and modern web technologies. Generate strong, customizable passwords with ease.
 
 ## 🌟 Features
 
+- **Secure Password Generation**: Create strong, random passwords with customizable options
+- **Real-time Strength Indicator**: Visual feedback on password strength
+- **Customizable Options**: Choose length, character types, and symbols
+- **Copy to Clipboard**: One-click copying with visual feedback
 - **Beautiful UI/UX**: Modern glassmorphism design with smooth animations
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Tool Discovery**: Browse and search through various AI tools by category
-- **Dynamic Routing**: Individual pages for each AI tool with detailed information
-- **Real-time Search**: Instant search functionality across all tools
-- **Status Indicators**: Visual indicators for tool status (Active, Beta, Coming Soon)
-- **Smooth Animations**: Powered by Framer Motion for delightful interactions
+- **Security Tips**: Built-in guidance for creating secure passwords
 
 ## 🚀 Tech Stack
 
@@ -27,7 +27,7 @@ A creative and modern web application that serves as an entry point for all AI t
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd vibe
+   cd password-generator
    ```
 
 2. **Install dependencies**
@@ -54,36 +54,33 @@ A creative and modern web application that serves as an entry point for all AI t
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── Header.tsx      # Navigation header
-│   └── ToolCard.tsx    # Tool display card
-├── context/            # React context for state management
-│   └── ToolContext.tsx # AI tools data and state
-├── pages/              # Page components
-│   ├── Home.tsx        # Main landing page
-│   └── ToolPage.tsx    # Individual tool page
-├── App.tsx             # Main app component
-├── main.tsx            # Application entry point
-└── index.css           # Global styles
+├── components/              # Reusable UI components
+│   ├── Header.tsx          # Navigation header
+│   ├── ToolCard.tsx        # Tool display card
+│   └── PasswordGenerator.tsx # Main password generator component
+├── context/                # React context for state management
+│   └── ToolContext.tsx     # Tool data and state
+├── pages/                  # Page components
+│   ├── Home.tsx            # Main landing page
+│   └── ToolPage.tsx        # Individual tool page
+├── App.tsx                 # Main app component
+├── main.tsx                # Application entry point
+└── index.css               # Global styles
 ```
 
-## 🎯 Adding New AI Tools
+## 🔐 Password Generator Features
 
-To add a new AI tool, update the `defaultTools` array in `src/context/ToolContext.tsx`:
+The password generator includes the following features:
 
-```typescript
-{
-  id: 'your-tool-id',
-  name: 'Your AI Tool Name',
-  description: 'Brief description of your tool',
-  category: 'Tool Category',
-  icon: '🎯',
-  color: 'primary', // or 'secondary'
-  status: 'active', // 'active', 'beta', or 'coming-soon'
-  features: ['Feature 1', 'Feature 2', 'Feature 3'],
-  url: '/tool/your-tool-id'
-}
-```
+- **Length Control**: Adjustable password length from 8 to 64 characters
+- **Character Types**: 
+  - Uppercase letters (A-Z)
+  - Lowercase letters (a-z)
+  - Numbers (0-9)
+  - Symbols (!@#$%^&*)
+- **Strength Indicator**: Real-time visual feedback on password strength
+- **Copy Functionality**: One-click copy to clipboard with confirmation
+- **Security Tips**: Built-in guidance for creating secure passwords
 
 ## 🎨 Customization
 
@@ -156,9 +153,9 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Built with ❤️ using modern web technologies
-- Inspired by the need for a centralized AI tools hub
+- Focused on providing secure password generation
 - Special thanks to the open-source community
 
 ---
 
-**Vibe AI Hub** - Your creative entry point to all AI tools ✨
+**Password Generator** - Your secure password creation tool 🔐
