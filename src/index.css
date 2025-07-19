@@ -25,4 +25,56 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent;
   }
+
+  /* Custom slider styles */
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .slider::-webkit-slider-track {
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+
+  .slider::-moz-range-track {
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .slider::-moz-range-thumb {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
 } 

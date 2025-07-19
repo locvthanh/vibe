@@ -10,9 +10,9 @@ const Home = () => {
   const categories = ['All', ...Array.from(new Set(tools.map(tool => tool.category)))]
 
   const stats = [
-    { icon: Zap, value: '50+', label: 'AI Tools' },
-    { icon: Users, value: '10K+', label: 'Users' },
-    { icon: TrendingUp, value: '99%', label: 'Success Rate' },
+    { icon: Zap, value: '1', label: 'AI Tool' },
+    { icon: Users, value: '100%', label: 'Secure' },
+    { icon: TrendingUp, value: 'Real-time', label: 'Generation' },
   ]
 
   return (
@@ -36,8 +36,8 @@ const Home = () => {
             <span className="gradient-text">Vibe AI Hub</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Your creative entry point to the world's most powerful AI tools. 
-            Discover, explore, and unleash the potential of artificial intelligence.
+            Your secure and reliable password generation tool. 
+            Create strong, customizable passwords with ease and confidence.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -82,10 +82,10 @@ const Home = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            Discover Amazing <span className="gradient-text">AI Tools</span>
+            Secure <span className="gradient-text">Password Generator</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            From content creation to data analysis, our AI tools are designed to enhance your productivity and creativity.
+            Generate strong, secure passwords with customizable options. Perfect for protecting your online accounts.
           </p>
         </motion.div>
 
@@ -144,24 +144,24 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                About <span className="gradient-text">Vibe AI Hub</span>
+                About <span className="gradient-text">Password Generator</span>
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                We're passionate about making AI accessible to everyone. Our platform brings together 
-                the most innovative AI tools in one place, designed to enhance your creativity and productivity.
+                We're passionate about online security. Our password generator creates strong, secure passwords 
+                to help protect your digital life with customizable options for all your needs.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
-                  <span className="text-gray-300">Curated collection of cutting-edge AI tools</span>
+                  <span className="text-gray-300">Customizable password length and character sets</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
-                  <span className="text-gray-300">User-friendly interface for seamless experience</span>
+                  <span className="text-gray-300">Real-time password strength indicator</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
-                  <span className="text-gray-300">Regular updates with new AI capabilities</span>
+                  <span className="text-gray-300">One-click copy to clipboard functionality</span>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@ const Home = () => {
                 🚀
               </motion.div>
               <p className="text-gray-300 text-lg">
-                Join thousands of users who are already transforming their workflow with AI
+                Generate secure passwords instantly with our reliable and user-friendly tool
               </p>
             </div>
           </div>
